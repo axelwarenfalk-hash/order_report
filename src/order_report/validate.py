@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 
 REQUIRED_COLUMNS = {
     "order_id",
@@ -14,6 +15,7 @@ REQUIRED_COLUMNS = {
 
 NUMERIC_COLUMNS = ("quantity", "unit_price", "discount")
 
+logger = logging.getLogger(__name__)
 
 def validate_orders(orders: pd.DataFrame) -> None:
     if not REQUIRED_COLUMNS.issubset(orders.columns):
@@ -22,5 +24,11 @@ def validate_orders(orders: pd.DataFrame) -> None:
 
     if orders.empty:
         raise ValueError("Orderdatan är tom")
+
+    for column in NUMERIC_COLUMNS:
+        try:
+            pd.to_numeric(orders[column], errors="raise")
+        except (ValueError, TypeError):
+            logger.warning(f"Kolumnen {column} innehåller ett eller flera rader som inte är ett tal.")
 
 
