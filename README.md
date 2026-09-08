@@ -56,7 +56,7 @@ python -m pytest
 
 # Reflektion
 
-1. # Vilka var de viktigaste problemen i originalkoden?
+1. ## Vilka var de viktigaste problemen i originalkoden?
 
 De som står i code_review.md:
 ### Hög prioritet
@@ -73,20 +73,20 @@ De som står i code_review.md:
 ### Låg prioritet
 7. Fynd 8 - Namnen beskriver dataflödet dåligt
 
-2. # Vilka förändringar tycker du förbättrade programmet mest?
+2. ## Vilka förändringar tycker du förbättrade programmet mest?
 Jag tycker att den generella omstruktureringen där varje modul har ett specifikt ansvar och varje funktion en specifik funktion och inte hanteras för mycket olika uppgifter. Detta gör det beydligt lättare att ha en bra överblick över projektet.
 
-3. # Varför valde du den projektstruktur du använde?
+3. ## Varför valde du den projektstruktur du använde?
 Jag använde en blandning av de strukturerna som du visat i dina videos och i projektbeskrviningen. Jag tycker det blev en lagom struktur för storleken av detta projekt. För många moduler kan också göra det krångligt så jag nöjde mig med några få med tydlig uppgift.
 
-4. # Var använde du OOP/dataclass och varför passade det där?
+4. ## Var använde du OOP/dataclass och varför passade det där?
 Jag använde OOP/dataclass i configurationen för att enkelt kunna byta sökvägar på ett ställe. Man skulle även kunna lägga andra inställningar där som tex vilka rapporter som ska skapas om man vill ha ett mer flexibelt projekt.
 
-5. # Vilka viktiga beteenden skyddar dina automatiska tester, och vilken nytta ger testerna om programmet förändras i framtiden?
+5. ## Vilka viktiga beteenden skyddar dina automatiska tester, och vilken nytta ger testerna om programmet förändras i framtiden?
 Testerna kontrollerar att programmets funktioner uppfyller sina förväntade ”kontrakt”, till exempel vilka situationer som ska ge ett undantag respektive en varning. De kontrollerar också att datastädning, validering, beräkningar och rapporter ger förväntade resultat. Vid framtida ändringar hjälper testerna till att upptäcka om något som tidigare fungerade har gått sönder
 
-6. # Vad var svårast?
+6. ## Vad var svårast?
 Att förstå symbiosen mellan loggermeddellande, try except och raise. Hur dessa ska användas i kombination på ett bra sätt.
 
-7. # Vad hade du velat förbättra ytterligare om du haft mer tid? 
+7. ## Vad hade du velat förbättra ytterligare om du haft mer tid? 
 Att lägga till fler inställningar i configurationen som gör det enklet att skapa andra typer av rapporter. 
